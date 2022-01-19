@@ -46,7 +46,7 @@ function eslint() {
 function stylelint() {
   return runCommand(
     'stylelint',
-    ['src/**/*.css', 'src/**/*.vue', 'src/**/*.less', 'src/**/*.sass', '--fix'],
+    ['src/**/*.css', 'src/**/*.vue', 'src/**/*.less', 'src/**/*.styl', 'src/**/*.stylus', 'src/**/*.sass', '--fix'],
     {
       start: 'Running stylelint...',
       succeed: 'Stylelint Passed.',

@@ -4,7 +4,7 @@ import { join, isAbsolute } from 'path';
 import { getVantConfig } from '../common';
 import { STYLE_DIR, SRC_DIR } from './constant';
 
-type CSS_LANG = 'css' | 'less' | 'scss';
+type CSS_LANG = 'css' | 'less' | 'scss' | 'stylus' | 'styl';
 
 function getCssLang(): CSS_LANG {
   const vantConfig = getVantConfig();
@@ -12,6 +12,10 @@ function getCssLang(): CSS_LANG {
 
   if (preprocessor === 'sass') {
     return 'scss';
+  }
+
+  if (['stylus', 'styl'].includes(preprocessor)) {
+    return 'styl';
   }
 
   return preprocessor;

@@ -40,7 +40,6 @@ export function getSiteDevBaseConfig(): WebpackConfig {
   const siteConfig = getSiteConfig();
   const title = getTitle(siteConfig);
   const { htmlPluginOptions } = vantConfig.site;
-
   return merge(baseConfig as any, {
     entry: {
       'site-desktop': [join(__dirname, '../../site/desktop/main.js')],
@@ -48,9 +47,9 @@ export function getSiteDevBaseConfig(): WebpackConfig {
     },
     devServer: {
       port: 8080,
-      quiet: true,
-      host: '0.0.0.0',
-      stats: 'errors-only',
+      // quiet: true,
+      // host: '0.0.0.0',
+      // stats: 'errors-only',
       publicPath: '/',
       disableHostCheck: true,
     },

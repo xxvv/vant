@@ -4,6 +4,7 @@ import { replaceExt } from '../common';
 import { compileCss } from './compile-css';
 import { compileLess } from './compile-less';
 import { compileSass } from './compile-sass';
+import { compileStylus } from './compile-stylus';
 import { consola } from '../common/logger';
 
 async function compileFile(filePath: string) {
@@ -17,6 +18,11 @@ async function compileFile(filePath: string) {
 
     if (parsedPath.ext === '.scss') {
       const source = await compileSass(filePath);
+      return await compileCss(source);
+    }
+
+    if (['.styl', '.stylus'].includes(parsedPath.ext)) {
+      const source = await compileStylus(filePath);
       return await compileCss(source);
     }
 

@@ -98,6 +98,11 @@ export const baseConfig: WebpackConfig = {
         use: [...CSS_LOADERS, 'less-loader'],
       },
       {
+        test: /\.styl(us)?$/,
+        sideEffects: true,
+        use: [...CSS_LOADERS, 'stylus-loader'],
+      },
+      {
         test: /\.scss$/,
         sideEffects: true,
         use: [
