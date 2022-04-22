@@ -84,7 +84,7 @@ export const baseConfig: WebpackConfig = {
       },
       {
         test: /\.(js|ts|jsx|tsx)$/,
-        exclude: /node_modules\/(?!(@vant\/cli))/,
+        exclude: /node_modules\/h5-cli/,
         use: [CACHE_LOADER, 'babel-loader'],
       },
       {

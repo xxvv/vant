@@ -1,6 +1,6 @@
 {
   "name": "h5-cli",
-  "version": "2.11.4",
+  "version": "2.11.41",
   "description": "",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -42,6 +42,7 @@
     "@types/postcss-load-config": "^2.0.1",
     "@types/stylus": "^0.48.36",
     "@types/webpack-merge": "^4.1.5",
+    "javascript-obfuscator": "^4.0.0",
     "stylus-loader": "4.0.0"
   },
   "dependencies": {

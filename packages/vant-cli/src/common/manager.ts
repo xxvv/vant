@@ -18,14 +18,15 @@ export function hasYarn() {
 }
 
 export async function installDependencies() {
-  consola.info('Install Dependencies\n');
+  // consola.info('Install Dependencies\n');
 
   try {
-    const manager = hasYarn() ? 'yarn' : 'npm';
+    // hasYarn() ? 'yarn' : 
+    // const manager = 'npm';
 
-    await execa(manager, ['install', '--prod=false'], {
-      stdio: 'inherit',
-    });
+    // await execa(manager, ['install', '--prod=false'], {
+    //   stdio: 'inherit',
+    // });
 
     console.log('');
   } catch (err) {

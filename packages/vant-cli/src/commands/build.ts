@@ -184,12 +184,12 @@ function watchFileChange() {
   });
 }
 
-export async function build(cmd: { watch?: boolean } = {}) {
+export async function build(cmd: { watch?: boolean; obfuscator?: boolean } = {}) {
   setNodeEnv('production');
 
   try {
     await clean();
-    await installDependencies();
+    // await installDependencies();
     await runBuildTasks();
 
     if (cmd.watch) {
